@@ -1,0 +1,48 @@
+{
+  "testRegex": "tests/.+\\.test\\.(ts|tsx)$",
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json"
+  ],
+  "setupFiles": [
+    "<rootDir>/node_modules/zftsbqoz1g/Private/Tests/JestSetup.js"
+  ],
+  "collectCoverage": true,
+  "coverageDirectory": "<rootDir>/tests/__TestCoverage",
+  "collectCoverageFrom": [
+    "src/**/*.{ts,tsx}"
+  ],
+  "coveragePathIgnorePatterns": [
+    "/App/App.tsx",
+    "/Interfaces/",
+    "/Types/",
+    "/UMD/"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "statements": 100,
+      "branches": 100,
+      "functions": 100,
+      "lines": 100
+    }
+  },
+  "coverageReporters": [
+    "html",
+    "json"
+  ],
+  "moduleNameMapper": {
+    "^Api/(.*)$": "<rootDir>/src/Api/$1",
+    "^BusinessLogic/(.*)$": "<rootDir>/src/BusinessLogic/$1",
+    "^Documentation/(.*)$": "<rootDir>/documentation/$1",
+    "^UI/(.*)$": "<rootDir>/src/UI/$1",
+    "^.+\\.(gif|jpg|jpeg|png|svg|webp|eot|otf|ttf|woff|woff2)$": "<rootDir>/node_modules/zftsbqoz1g/Private/Tests/Mocks/FileMock.js",
+    "^.+\\.(css|sass|scss)$": "<rootDir>/node_modules/zftsbqoz1g/Private/Tests/Mocks/StyleMock.js"
+  },
+  "testEnvironment": "node"
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "hash": "cb32c32b44c375193240",
+    "name": "BaseComponent",
+    "props": [
+      {
+        "name": "title",
+        "description": "Optional title",
+        "type": "string | undefined",
+        "isRequired": false
+      }
+    ]
+  },
+  {
+    "hash": "b8fad8dddafd82087679",
+    "name": "PagesComponent",
+    "props": [
+      {
+        "name": "activePage",
+        "description": "Optional title",
+        "type": "number | undefined",
+        "isRequired": false
+      }
+    ]
+  },
+  {
+    "hash": "3e7429acb6df15a7582e",
+    "name": "Routes",
+    "description": "Routes component to define all navigation routes for the application"
+  },
+  {
+    "hash": "4bf383eafc37314ddb05",
+    "name": "SampleComponent",
+    "props": [
+      {
+        "name": "title",
+        "description": "Optional title",
+        "type": "string | undefined",
+        "isRequired": false
+      }
+    ]
+  },
+  {
+    "hash": "b8f61a825699619d4ffb",
+    "name": "SliderComponent",
+    "props": [
+      {
+        "name": "images",
+        "description": "Optional title",
+        "type": "string[]",
+        "isRequired": true
+      }
+    ]
+  }
+]

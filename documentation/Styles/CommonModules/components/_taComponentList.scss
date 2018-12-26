@@ -1,0 +1,30 @@
+._documentationNavbar {
+  background: $documentationNavbarBg;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  h1 {
+    font-size: 16px;
+    padding: 15px 10px;
+    width: 100%;
+    color: $documentationNavbarHeadingColor;
+    margin: 0 0 10px 0;
+    border-bottom: $documentationNavbarListHeadingBorder solid 1px;
+  }
+  ._componentList {
+    li {
+      padding: 0 10px;
+      >a {
+        background: $documentationNavbarListBg;
+        border-radius: 0;
+        &:hover,
+        &:focus {
+          background: $documentationNavbarListBgHover;
+        }
+      }
+    }
+  }
+}

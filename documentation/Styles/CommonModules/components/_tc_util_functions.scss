@@ -1,0 +1,49 @@
+@function getBorderColorSameShade($color){
+	@if(lightness($color) <= 50%){
+		@return lighten($color, 25%)
+	}
+	@else{
+		@return darken($color, 15%)
+	}
+}
+
+@function getBorderColorContrastShade($color){
+	@if(lightness($color) <= 50%){
+		@return lighten($color, 75%)
+	}
+	@else{
+		@return darken($color, 65%)
+	}
+}
+
+@function getContrast($color, $perc){
+	@if(lightness($color) <= 50%){
+		@return lighten($color, $perc);
+	}
+	@else{
+		@return darken($color, $perc);
+	}
+}
+
+@function getHoverColor($color){
+	@if($company == ceb){
+		@if ($color == #00aeef) {
+			@return #0a3f6b;
+		} @else if ($color == #2bc4b6){
+			@return #00566b;
+		} @else{
+			@return getContrast($color, 8%);
+		}
+	} @else{
+		@return getContrast($color, 8%);
+	}
+}
+
+@function getTextColor($color){
+	@if(lightness($color) <= 50%){
+		@return lighten($color, 50%)
+	}
+	@else{
+		@return darken($color, 40%)
+	}
+}

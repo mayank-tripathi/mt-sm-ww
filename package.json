@@ -1,0 +1,28 @@
+{
+  "$schema": "./schemas/package.schema.json",
+  "private": true,
+  "name": "mayank-wedding-website",
+  "description": "Mayank Wedding Website Project",
+  "version": "1.0.0",
+  "scripts": {
+    "tslint": "node_modules/.bin/tslint --project tsconfig.json --format verbose",
+    "pretest": "node_modules/.bin/rimraf tests/__TestCoverage",
+    "test": "node_modules/.bin/jest --config jestconfig.json --coverage",
+    "prebuild:debug": "npm run tslint",
+    "prebuild:release": "npm run tslint",
+    "build:debug": "node_modules/.bin/ts-node -r tsconfig-paths/register build/Builders/BuildCode.ts mode=debug",
+    "build:release": "node_modules/.bin/ts-node -r tsconfig-paths/register build/Builders/BuildCode.ts mode=release",
+    "offpostbuild:debug": "npm test",
+    "offpostbuild:release": "npm test",
+    "start:app:debug": "node_modules/.bin/ts-node -r tsconfig-paths/register build/Builders/StartAppWebServer.ts mode=debug",
+    "start:app:release": "node_modules/.bin/ts-node -r tsconfig-paths/register build/Builders/StartAppWebServer.ts mode=release",
+    "start:app:umd:debug": "node_modules/.bin/ts-node -r tsconfig-paths/register build/Builders/StartAppUmdWebServer.ts mode=debug",
+    "start:app:umd:release": "node_modules/.bin/ts-node -r tsconfig-paths/register build/Builders/StartAppUmdWebServer.ts mode=release",
+    "start:docs:debug": "node_modules/.bin/ts-node -r tsconfig-paths/register build/Builders/StartDocsWebServer.ts mode=debug",
+    "start:docs:release": "node_modules/.bin/ts-node -r tsconfig-paths/register build/Builders/StartDocsWebServer.ts mode=release",
+    "createdockerfile": "node_modules/.bin/ts-node -r tsconfig-paths/register build/Builders/CreateDockerfile.ts mode=release"
+  },
+  "dependencies": {
+    "zftsbqoz1g": "1.0.142"
+  }
+}

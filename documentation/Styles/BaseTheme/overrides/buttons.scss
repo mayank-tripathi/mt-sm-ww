@@ -1,0 +1,21 @@
+
+/** Creating a primary button */
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-color);
+}
+
+/** Creating a secondary button */
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-color);
+}
+
+/** Creating a primary button tile */
+.btn-tile-primary {
+	@include button-variant($btn-tile-primary-color, $btn-tile-primary-color);
+}
+
+/** Creating a dark blue button tile*/
+.btn-tile-darkBlue {
+	@include button-variant($btn-tile-darkBlue-color, $btn-tile-darkBlue-color);
+}
+

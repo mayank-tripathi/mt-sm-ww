@@ -1,0 +1,37 @@
+// Util Functions
+@import "../commonModules/components/_tc_util_functions";
+@import "variables";
+@import "../commonModules/_default-variable-overrides";
+
+// BOOTSTRAP COMPONENTS
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// PLAYER COMPONENTS
+@import "../commonModules/components/_tc_util_classes";
+
+// BOOTSTRAP COMPONENTS OVERRIDES
+@import "overrides/fonts";
+@import "overrides/panels";
+@import "overrides/buttons";
+
+// Custom styles
+@import "../commonModules/components/_tc_radioButtons";
+@import "../commonModules/components/_tc_toggleButton";
+@import "../commonModules/components/_tc_checkbox";
+body {
+	font-family: cebwebfont-normal;
+	background: $body-bg;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'cebwebfont-normal';
+	color: $brand-primary;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 30px;
+	padding-left: 15px;
+}

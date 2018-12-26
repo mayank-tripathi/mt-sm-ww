@@ -1,0 +1,129 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+  // Controls if the minimap is shown
+  "editor.minimap.enabled": false,
+  // Controls if Find in Selection flag is turned on when multiple characters or lines of text are selected in the editor
+  "editor.find.autoFindInSelection": true,
+  // Controls if the editor should automatically format the line after typing
+  "editor.formatOnType": true,
+  // Controls if the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+  "editor.formatOnPaste": true,
+  // Controls if the editor should automatically adjust the indentation when users type, paste or move lines. Indentation rules of the language must be available.
+  "editor.autoIndent": true,
+  // Zoom the font of the editor when using mouse wheel and holding Ctrl
+  "editor.mouseWheelZoom": true,
+  // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
+  "editor.formatOnSave": true,
+  "[html]": {
+    // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
+    "editor.formatOnSave": false
+  },
+  // Controls the strategy for computing folding ranges. `auto` uses a language specific folding strategy, if available. `indentation` uses the indentation based folding strategy.
+  "editor.foldingStrategy": "indentation",
+  // Controls whether the fold controls on the gutter are automatically hidden.
+  "editor.showFoldingControls": "always",
+  // Controls if opened editors show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
+  "workbench.editor.enablePreview": false,
+  // Controls if opened editors from Quick Open show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  // Controls if an editor is revealed in any of the visible groups if opened. If disabled, an editor will prefer to open in the currently active editor group. If enabled, an already opened editor will be revealed instead of opened again in the currently active editor group. Note that there are some cases where this setting is ignored, e.g. when forcing an editor to open in a specific group or to the side of the currently active group.
+  "workbench.editor.revealIfOpen": true,
+  // Controls which editor is shown at startup, if none is restored from the previous session. Select 'none' to start without an editor, 'welcomePage' to open the Welcome page (default), 'newUntitledFile' to open a new untitled file (only when not opening a folder).
+  "workbench.startupEditor": "none",
+  // Controls the visibility of the Twitter feedback (smiley) in the status bar at the bottom of the workbench.
+  "workbench.statusBar.feedback.visible": false,
+  // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
+  "files.autoSave": "off",
+  // When enabled, will trim trailing whitespace when saving a file.
+  "files.trimTrailingWhitespace": true,
+  // When using a vendor-specific prefix make sure to also include all other vendor-specific properties
+  "css.lint.compatibleVendorPrefixes": "error",
+  // When using a vendor-specific prefix also include the standard property
+  "css.lint.vendorPrefix": "error",
+  // Do not use duplicate style definitions
+  "css.lint.duplicateProperties": "error",
+  // Do not use empty rulesets
+  "css.lint.emptyRules": "error",
+  // @font-face rule must define 'src' and 'font-family' properties
+  "css.lint.fontFaceProperties": "error",
+  // Unknown property
+  "css.lint.unknownProperties": "error",
+  // Unknown vendor specific property
+  "css.lint.unknownVendorSpecificProperties": "error",
+  // When using a vendor-specific prefix make sure to also include all other vendor-specific properties
+  "scss.lint.compatibleVendorPrefixes": "error",
+  // When using a vendor-specific prefix also include the standard property
+  "scss.lint.vendorPrefix": "error",
+  // Do not use duplicate style definitions
+  "scss.lint.duplicateProperties": "error",
+  // Do not use empty rulesets
+  "scss.lint.emptyRules": "error",
+  // @font-face rule must define 'src' and 'font-family' properties
+  "scss.lint.fontFaceProperties": "error",
+  // Unknown property
+  "scss.lint.unknownProperties": "error",
+  // Unknown vendor specific property
+  "scss.lint.unknownVendorSpecificProperties": "error",
+  // When using a vendor-specific prefix make sure to also include all other vendor-specific properties
+  "less.lint.compatibleVendorPrefixes": "error",
+  // When using a vendor-specific prefix also include the standard property
+  "less.lint.vendorPrefix": "error",
+  // Do not use duplicate style definitions
+  "less.lint.duplicateProperties": "error",
+  // Do not use empty rulesets
+  "less.lint.emptyRules": "error",
+  // @font-face rule must define 'src' and 'font-family' properties
+  "less.lint.fontFaceProperties": "error",
+  // Unknown property
+  "less.lint.unknownProperties": "error",
+  // Unknown vendor specific property
+  "less.lint.unknownVendorSpecificProperties": "error",
+  // Maximum amount of characters per line (0 = disable)
+  "html.format.wrapLineLength": 0,
+  // Indent <head> and <body> sections
+  "html.format.indentInnerHtml": true,
+  // List of tags, comma separated, that should have an extra newline before them. 'null' defaults to "head, body, /html".
+  "html.format.extraLiners": "",
+  // Specifies the folder path containing the tsserver and lib*.d.ts files to use.
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  // Enable/disable references CodeLens in TypeScript files. Requires TypeScript >= 2.0.6.
+  "typescript.referencesCodeLens.enabled": true,
+  // Enable/disable implementations CodeLens. Requires TypeScript >= 2.2.0.
+  "typescript.implementationsCodeLens.enabled": true,
+  // Complete functions with their parameter signature.
+  "typescript.useCodeSnippetsOnMethodSuggest": true,
+  // Defines space handling after function keyword for anonymous functions.
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  // Enable/disable references CodeLens in JavaScript files.
+  "javascript.referencesCodeLens.enabled": true,
+  // Defines space handling after function keyword for anonymous functions.
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  // Scans devDependencies as well
+  "npm-intellisense.scanDevDependencies": true,
+  // Controls the maximum amount of lines the terminal keeps in its buffer.
+  "terminal.integrated.scrollback": 1000000,
+  // Show Errors & Warnings on files and folder.
+  "problems.decorations.enabled": true,
+  // The maximum number of named imports to include in a single line
+  "typescript.extension.sortImports.maxNamedImportsInSingleLine": 100,
+  // The type of quote to use for the file or package paths
+  "typescript.extension.sortImports.quoteStyle": "double",
+  // Whether to sort all imports whenever saving a Typescript file
+  "typescript.extension.sortImports.sortOnSave": true,
+  // Allows setting breakpoint in any file
+  "debug.allowBreakpointsEverywhere": true,
+  // Show variable values inline in editor while debugging
+  "debug.inlineValues": true,
+  // Whether auto fetching is enabled
+  "git.autofetch": true,
+  // Controls whether Git should check for unsaved files before committing.
+  "git.promptToSaveFilesBeforeCommit": true,
+  // Confirm before synchronizing git repositories
+  "git.confirmSync": false,
+  // Enable an explorer view for npm scripts.
+  "npm.enableScriptExplorer": true,
+  // Enable/disable navigation breadcrumbs
+  "breadcrumbs.enabled": true
+}

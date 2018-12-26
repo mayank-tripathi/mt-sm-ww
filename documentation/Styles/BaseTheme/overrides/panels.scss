@@ -1,0 +1,12 @@
+.panel {
+ @include box-shadow($panel-shadow);
+ margin-bottom: $panel-margin-bottom;
+ color: $panel-text;
+ 
+ .panel-heading{
+	color: $ceb-dark-blue;
+	font-family: cebwebfont-bold;
+	font-weight: inherit;
+	text-transform: uppercase;
+ }
+}

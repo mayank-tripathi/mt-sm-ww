@@ -1,0 +1,12 @@
+@import "./custom/custom-functions.scss";
+@import "./custom/custom-variables.scss";
+@import "./custom/custom-colors.scss";
+@import "./custom/custom-fonts.scss";
+@import "~zftsbqoz1g/Public/UI/Web/Styles/scss/common-styles.scss"; // ~ui-common (not ~/ui-common) is a special syntax to import from node_modules/ui-common
+@import "./custom/custom-mixins.scss";
+
+/* Application Specific styles start here */
+
+@import "./components/_basePage";
+@import "./components/_pagesComponent";
+@import "./components/_sliderComponent";

@@ -1,0 +1,53 @@
+input[type=checkbox]
+{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+
+}
+
+input[type=checkbox] + label._cebCheckbox {
+
+  cursor: pointer;
+  margin: 0;
+  font-weight: normal;
+
+  &::after{
+	font-family: 'shl-icon-font';
+    content: '\2000';
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    border-radius: 3px;
+    font-size: 10px;
+    line-height: 0;
+    padding-top: 13px;
+    color: $checkColor;
+    text-align: center;
+    background: $checkFill_unselected;
+    box-shadow: 0 0 5px $shadow-color inset;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+}
+
+input[type=checkbox]:checked + label._cebCheckbox{
+
+	color: $brand-primary;
+
+  &::after{
+    content: '\e605';
+    background: $checkFill_selected;
+    box-shadow: 0 0 2px $shadow-color;
+  }
+}

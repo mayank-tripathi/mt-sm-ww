@@ -1,0 +1,97 @@
+
+/*$body-bg: #C9C3C3 !default;*/
+
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         16px !default;
+$progress-border-radius: 	10px !default;
+$progress-bar-height:       10px !default;
+
+
+/* Add CSS Overrrides Here */
+
+/* Navbar height to 40 PIXELS */
+.player-header {
+	.navbar-nav > li > a, .navbar-header > a {padding-top:10px !important; padding-bottom:10px !important;}
+	.navbar {min-height: 40px !important}
+	.navbar-header {height: 40px;}
+	.header-custom-sign-btn {
+		margin-top: 8px;
+		border-radius: 4px;
+		padding: 5px 15px;
+		display: block;
+		font-size: 100% !important;
+		> a {color: inherit !important; font-weight: normal !important;}
+		> .text-muted {color: #d0d0d0 !important; font-weight: normal !important;}
+	}
+	select.form-control {
+		margin-top: 7px;
+		height: 25px;
+		border-radius: 4px;
+		padding: 0px 0px 0px 10px;
+	}
+}
+
+/* HTML height*/
+html, body {min-height: 100%; height: 100%;}
+#wrapper {min-height: 100%; padding-top:42px;}
+@media (min-width: 1200px) {
+#wrapper {margin-top: -42px;}
+}
+.customWrapper{overflow:auto;}
+
+.position-relative {position: relative;}
+.tc-source-loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: .4em solid rgb(255, 255, 255);
+  border-right: .4em solid rgb(255, 255, 255);
+  border-bottom: .4em solid rgb(255, 255, 255);
+  border-left: .4em solid $brand-primary;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.tc-source-loader,
+.tc-source-loader:after {
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.progress {
+	height : $progress-bar-height !important;
+}
+
+.cebwidget {visibility: hidden;}
+.btn {
+	white-space: normal !important;
+}
+
+
+
+
+

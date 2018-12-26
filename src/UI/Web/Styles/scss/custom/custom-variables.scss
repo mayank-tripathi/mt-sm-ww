@@ -1,0 +1,5 @@
+$pages-bg: #fff;
+$sectionPadding: 25px;
+$totalSectionPadding: $sectionPadding * 2;
+$containerHeight: calc(100vh - #{$totalSectionPadding});
+$pageShadow: 0 0 12px rgba(0, 0, 0, 0.5);

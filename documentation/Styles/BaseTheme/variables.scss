@@ -1,0 +1,76 @@
+$company: ceb;
+$icon-font-path: "~/fonts";
+
+// Branding Colors
+$brand-primary: rgb(0, 174, 239) !default; // #00aeef
+$white-transparent: rgba(255, 255, 255, 0.8);
+$main-text-Color: #333333; // use this variable to feed this color
+$btn-primary-color: $brand-primary !default;
+$brand-secondary: rgb(43, 196, 182) !default; // #95e1da
+$ceb-dark-blue: if($company==ceb, rgb(10, 63, 107), $brand-secondary) !default;
+$btn-default-color: $brand-primary;
+$btn-secondary-color: $brand-secondary !default;
+$btn-secondary-border: rgba(0, 0, 0, 0) !default;
+$btn-primary-border: rgba(0, 0, 0, 0) !default;
+$link-color: $brand-primary;
+$link-hover-color: $brand-primary;
+$link-decoration: none;
+
+// Button Hover Overrides
+$btn-primary-hover: getHoverColor($brand-primary) !default;
+$btn-primary-hover-border: $btn-primary-hover !default;
+$btn-secondary-hover: getHoverColor($brand-secondary) !default;
+$btn-secondary-hover-border: $btn-secondary-hover !default;
+$body-bg: #ffffff !default;
+$text-color: if($company==ceb, #333333, getTextColor($body-bg)) !default;
+
+// Font
+$font-size-base: 1rem !default;
+
+// Panels
+$panel-shadow: 0rem 0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.05);
+$panel-margin-bottom: 0.5rem;
+$panel-bg: rgba(255, 255, 255, 0.95) !default;
+$panel-text: #333333;
+
+// Bootstrap vars
+$screen-xs-max: 50rem !default;
+$navbar-default-link-color: #777 !default;
+$navbar-padding-vertical: 1rem !default;
+$navbar-padding-horizontal: 1rem !default;
+$brand-danger: #d9534f !default;
+$brand-warning: #f0ad4e !default;
+$brand-success: #5cb85c !default;
+$zindex-modal-background: 1045 !default;
+$cursor-disabled: #ddd;
+$textDanger: #d9534f;
+$radio-shadow: 0 2px 3px rgba(153, 153, 153, 0.5) inset;
+$radio-bg: rgba(0, 0, 0, 0.2);
+$radioMob-text-color: inherit;
+
+// Toggle Button
+$toggleFillColor: $brand-primary;
+$toggleBG: rgba(0, 0, 0, 0.25);
+$toggleButtonBg: #f0f0f0;
+$toggleButtonCheckedBorderColor: inherit;
+
+// TC Checkbox
+$checkColor: #fff;
+$checkFill_selected: $brand-primary;
+$checkFill_unselected: rgba(0, 0, 0, 0.1);
+$shadow-color: rgba(0, 0, 0, 0.3);
+
+// Tile Buttons
+$btn-tile-primary-color: $brand-primary;
+$btn-tile-primary-bg: #ffffff;
+$btn-tile-primary-border: #ffffff;
+$btn-tile-darkBlue-color: $ceb-dark-blue;
+$btn-tile-darkBlue-bg: #ffffff;
+$btn-tile-darkBlue-border: #ffffff;
+
+//TaComponentList
+$documentationNavbarBg: #333333;
+$documentationNavbarHeadingColor: #f4b213;
+$documentationNavbarListHeadingBorder: rgba(255, 255, 255, 0.2);
+$documentationNavbarListBg: transparent;
+$documentationNavbarListBgHover: rgba(255, 255, 255, 0.2);

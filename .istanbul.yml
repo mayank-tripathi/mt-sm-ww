@@ -1,0 +1,6 @@
+reporting:
+    watermarks:
+        statements: [99.999, 100]
+        lines: [99.999, 100]
+        functions: [99.999, 100]
+        branches: [99.999, 100]
