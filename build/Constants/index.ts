@@ -121,11 +121,11 @@ export const Constants: IConstants = {
   ///////////////////
 
   /** Application port number */
-  APP_PORT: 4001,
+  APP_PORT: 8001,
   /** Application (UMD) port number */
-  APP_UMD_PORT: 4002,
+  APP_UMD_PORT: 8002,
   /** Documentation port number */
-  DOCS_PORT: 4003,
+  DOCS_PORT: 8003,
 
   ////////////
   // Docker //

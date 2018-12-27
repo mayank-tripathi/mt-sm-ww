@@ -22,8 +22,14 @@ export default class SliderComponent extends React.Component<ISliderComponentPro
 
     return (
       <div className="col _pageBg _sliderContainer">
-        Image Slider
+        {this.props.images && this.getImages()}
       </div>
     );
   }
+
+  private readonly getImages = (): JSX.Element[] => this.props.images.map((image: string, index: number) => {
+    const style: React.CSSProperties | undefined = {};
+    style.backgroundImage = image;
+    return <div className="_sliderImage" key={index} style={style} />;
+  })
 }
