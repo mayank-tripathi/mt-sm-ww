@@ -1,0 +1,23 @@
+._sliderContainer {
+  position: relative;
+
+  ._sliderImages{
+
+    > ._sliderImage{
+      position: absolute;
+      top: 0;
+      left:0;
+      background-size: cover;
+      background-position: center top;
+      height: $containerHeight;
+    }
+
+  }
+
+  ._sliderNavigatorContainer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+}

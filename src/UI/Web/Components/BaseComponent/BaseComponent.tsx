@@ -21,15 +21,16 @@ export default class BaseComponent extends React.Component<IBaseComponentProps> 
   // private readonly BaseComponentStore: BaseComponentStore = BaseComponentStore.instance;
 
   public render() {
+    const images: string[] = ["https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/01.JPG", "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/02.JPG"];
 
     return (
       <div className="container-fluid">
         <div className="row _landscape">
-          <div className="col-6"><SliderComponent images={[]} /></div>
+          <div className="col-6"><SliderComponent images={images} /></div>
           <div className="col-6 _fold"><PagesComponent /></div>
         </div>
         <div className="row _portrait">
-          <div className="col-12"><SliderComponent images={[]} /></div>
+          <div className="col-12"><SliderComponent images={images} /></div>
           <div className="col-12 _fold"><PagesComponent /></div>
         </div>
       </div>
