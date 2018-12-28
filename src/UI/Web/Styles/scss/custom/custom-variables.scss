@@ -3,3 +3,5 @@ $sectionPadding: 25px;
 $totalSectionPadding: $sectionPadding * 2;
 $containerHeight: calc(100vh - #{$totalSectionPadding});
 $pageShadow: 0 0 12px rgba(0, 0, 0, 0.5);
+$sliderImageBorder: #fff solid 3px;
+$sliderNavigatorColor: rgba(255, 255, 255, 0.7);

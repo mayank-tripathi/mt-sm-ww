@@ -42,7 +42,7 @@ export default class SliderComponent extends React.Component<ISliderComponentPro
     const _toReturn: JSX.Element[] = [];
 
     for (let i = 0; i < imagesCount; i++) {
-      _toReturn.push(<a className="_sliderNavigator d-inline-flex" data-index={i} href="" key={i}>{i}</a>);
+      _toReturn.push(<a className="_sliderNavigator d-inline-flex" data-index={i} href="" key={i} />);
     }
 
     return _toReturn;
