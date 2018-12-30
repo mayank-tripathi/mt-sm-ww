@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merienda+One');
+
 body{
   background-image: url("../../images/bg.jpg");
   background-position: top center;
   background-repeat: repeat;
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 400;
 }
-._landscape{
+._landscape, ._portrait{
   height: 100vh;
 
   &> div{
@@ -11,13 +16,19 @@ body{
   }
 
   ._pageBg{
-    background-color: $pages-bg;
     height: $containerHeight;
     box-shadow: $pageShadow;
+
+    ._topDesign{
+      padding-top: 0.5rem;
+      img{
+        width: 40%;
+        height: auto;
+      }
+    }
   }
 }
 
-@media screen and (orientation: landscape) {
   ._landscape{
     ._fold{
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 50%);
@@ -25,14 +36,38 @@ body{
       background-repeat: no-repeat;
     }
   }
-}
 
-@media screen and (orientation: portrait) {
-  ._landscape{
+  ._portrait{
     ._fold{
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 50%);
       background-position: top left;
       background-repeat: no-repeat;
     }
+  }
+
+
+@media screen and (orientation: landscape) {
+  ._portrait{
+    display: none;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  ._landscape{
+    display: none;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  body{
+    font-size: 0.8rem;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body{
+    font-size: 0.8rem;
   }
 }

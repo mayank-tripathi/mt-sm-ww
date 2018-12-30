@@ -1,6 +1,7 @@
 import * as React from "react";
 import { observer } from "mobx-react";
 import { PageStore } from "UI/Stores/PageStore";
+import { toInt } from "zftsbqoz1g/Public/Common/Utils/StringUtils";
 // import { l } from "UI/Stores/LocalisationStore";
 // import { SliderComponentStore } from "UI/Stores/SliderComponentStore";
 
@@ -51,7 +52,7 @@ export default class SliderComponent extends React.Component<ISliderComponentPro
 
     for (let i = 0; i < imagesCount; i++) {
       const _active: string = this.PageStore.currentImage === i ? "active" : "";
-      _toReturn.push(<a className={`_sliderNavigator d-inline-flex ${_active}`} data-index={i} href="" key={i} />);
+      _toReturn.push(<a className={`_sliderNavigator d-inline-flex ${_active}`} data-index={i} href="" key={i} onClick={this.onNavigationClick} />);
     }
 
     return _toReturn;
@@ -68,5 +69,13 @@ export default class SliderComponent extends React.Component<ISliderComponentPro
     this._sliderInterval = window.setInterval(() => {
       this.changeImage(this.PageStore.currentImage + 1);
     }, 5000);
+  }
+  private readonly onNavigationClick = async (e: React.SyntheticEvent<HTMLAnchorElement>): Promise<void> => {
+    e.preventDefault();
+    const _element: HTMLElement = e.target as HTMLElement;
+    const _dIndex: string | null = _element.getAttribute("data-index");
+    const _sindex: number | undefined = _dIndex ? toInt(_dIndex) : 0;
+    const index: number = typeof _sindex === "undefined" ? 0 : _sindex;
+    await this.changeImage(index);
   }
 }

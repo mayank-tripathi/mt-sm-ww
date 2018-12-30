@@ -38,7 +38,7 @@
       transition: padding 0.3s ease;
       -webkit-transition: padding 0.3s ease;
 
-      &.active, &:hover, &:focus{
+      &.active, &:hover{
         padding: 3px 10px;
       }
     }

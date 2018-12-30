@@ -1,0 +1,74 @@
+._pagesContainer{
+  background-color: $pages-bg;
+  // background-image: url("../../images/top-design.png");
+  // background-position: center 15px;
+  // background-size: 250px auto;
+  // background-repeat: no-repeat;
+  // padding-top: 80px;
+  overflow: auto;
+
+  ._landingPage {
+    background-image: url("../../images/design-left.png"), url("../../images/design-right.png");
+    background-position: left center, right center;
+    background-size: 22% auto;
+    background-repeat: no-repeat;
+
+    ._inverted{
+      img{
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+      }
+    }
+
+    img.mid-design{
+      width: 15%;
+    }
+
+    img.top-design{
+      width: 50%;
+    }
+
+    h1{
+      font-family: 'Merienda One', cursive;
+      color: $heading-color;
+      font-size: 3rem;
+      font-weight: bold;
+
+      span{
+        color: $text-color;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  ._pagesContainer{
+    ._landingPage{
+      h1{
+        font-size: 1.5rem;
+        span{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  ._pagesContainer{
+    ._landingPage{
+      h1{
+        font-size: 1.5rem;
+        span{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
