@@ -3,7 +3,7 @@ body{
   background-position: top center;
   background-repeat: repeat;
 }
-._landscape, ._portrait{
+._landscape{
   height: 100vh;
 
   &> div{
@@ -17,30 +17,22 @@ body{
   }
 }
 
-._landscape{
-  ._fold{
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 50%);
-    background-position: top left;
-    background-repeat: no-repeat;
-  }
-}
-
-._portrait{
-  ._fold{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 50%);
-    background-position: top left;
-    background-repeat: no-repeat;
-  }
-}
-
 @media screen and (orientation: landscape) {
-  ._portrait{
-    display: none;
+  ._landscape{
+    ._fold{
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 50%);
+      background-position: top left;
+      background-repeat: no-repeat;
+    }
   }
 }
 
 @media screen and (orientation: portrait) {
   ._landscape{
-    display: none;
+    ._fold{
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 50%);
+      background-position: top left;
+      background-repeat: no-repeat;
+    }
   }
 }

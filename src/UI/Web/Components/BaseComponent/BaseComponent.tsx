@@ -29,10 +29,6 @@ export default class BaseComponent extends React.Component<IBaseComponentProps> 
           <div className="col-6"><SliderComponent images={images} /></div>
           <div className="col-6 _fold"><PagesComponent /></div>
         </div>
-        <div className="row _portrait">
-          <div className="col-12"><SliderComponent images={images} /></div>
-          <div className="col-12 _fold"><PagesComponent /></div>
-        </div>
       </div>
     );
   }

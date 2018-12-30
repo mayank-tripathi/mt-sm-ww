@@ -1,5 +1,6 @@
 import * as React from "react";
 import { observer } from "mobx-react";
+import { PageStore } from "UI/Stores/PageStore";
 // import { l } from "UI/Stores/LocalisationStore";
 // import { SliderComponentStore } from "UI/Stores/SliderComponentStore";
 
@@ -16,8 +17,14 @@ export default class SliderComponent extends React.Component<ISliderComponentPro
     super(props) // tslint:disable-line:semicolon
   }
 
-  // private readonly SliderComponentStore: SliderComponentStore = SliderComponentStore.instance;
+  private readonly PageStore: PageStore = PageStore.instance;
 
+  // tslint:disable-next-line:no-empty
+  private _sliderInterval: number = -1;
+
+  public componentDidMount() {
+    this.startSlider();
+  }
   public render() {
 
     return (
@@ -35,16 +42,31 @@ export default class SliderComponent extends React.Component<ISliderComponentPro
   private readonly getImages = (): JSX.Element[] => this.props.images.map((image: string, index: number) => {
     const style: React.CSSProperties | undefined = {};
     style.backgroundImage = `url(${image})`;
-    return <div className="col-12 _sliderImage" data-index={index} key={index} style={style} />;
+    const _visibility: string = this.PageStore.currentImage === index ? "visible" : "";
+    return <div className={`col-12 _sliderImage ${_visibility}`} key={index} style={style} />;
   })
 
   private readonly getSliderNavigators = (imagesCount: number): JSX.Element[] => {
     const _toReturn: JSX.Element[] = [];
 
     for (let i = 0; i < imagesCount; i++) {
-      _toReturn.push(<a className="_sliderNavigator d-inline-flex" data-index={i} href="" key={i} />);
+      const _active: string = this.PageStore.currentImage === i ? "active" : "";
+      _toReturn.push(<a className={`_sliderNavigator d-inline-flex ${_active}`} data-index={i} href="" key={i} />);
     }
 
     return _toReturn;
+  }
+  private readonly changeImage = (index: number): void => {
+    this.PageStore.setCurrentImage(index);
+  }
+
+  private readonly startSlider = (): void => {
+    if (this._sliderInterval) {
+      clearInterval(this._sliderInterval);
+    }
+
+    this._sliderInterval = window.setInterval(() => {
+      this.changeImage(this.PageStore.currentImage + 1);
+    }, 5000);
   }
 }
