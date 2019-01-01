@@ -43,6 +43,18 @@ body{
       background-position: top left;
       background-repeat: no-repeat;
     }
+    ._rotateIcon{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9000;
+      opacity: 0.7;
+
+      img{
+        width: 25%;
+      }
+    }
   }
 
 

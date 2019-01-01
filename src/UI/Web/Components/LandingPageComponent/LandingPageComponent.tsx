@@ -28,12 +28,14 @@ export default class LandingPageComponent extends React.Component<ILandingPageCo
           <img className="top-design" src={_topDesign} />
         </div>
         <p className="text-center mb-0">As we shall become one<br />to share all the days of our lives...</p>
-        <div className="text-center _inverted pt-3">
-          <img className="mid-design" src={_midDesign} />
-        </div>
-        <h1 className="text-center py-3 mb-0">Mayank<br /><span>&amp;</span><br />Shatakshi</h1>
-        <div className="text-center pb-3">
-          <img className="mid-design" src={_midDesign} />
+        <div className="col-12 _nameContainer">
+          <div className="text-center _inverted pt-3">
+            <img className="mid-design" src={_midDesign} />
+          </div>
+          <h1 className="text-center py-3 mb-0">Mayank<br /><span>&amp;</span><br />Shatakshi</h1>
+          <div className="text-center pb-3">
+            <img className="mid-design" src={_midDesign} />
+          </div>
         </div>
         <CountdownComponent targetDate={new Date("01/27/2019 19:00:00")} />
       </div>

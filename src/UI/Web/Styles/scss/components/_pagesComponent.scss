@@ -3,10 +3,13 @@
   overflow: auto;
 
   ._landingPage {
-    background-image: url("../../images/design-left.png"), url("../../images/design-right.png");
-    background-position: left center, right center;
-    background-size: 22% auto;
-    background-repeat: no-repeat;
+
+    ._nameContainer{
+      background-image: url("../../images/design-left.png"), url("../../images/design-right.png");
+      background-position: left center, right center;
+      background-size: 20% auto;
+      background-repeat: no-repeat;
+    }
 
     ._inverted{
       img{
@@ -42,6 +45,7 @@
   ._countdown{
     ._clockDigit{
       font-size: 2rem;
+      font-family: "Times New Roman", sans-serif;
     }
     ._title{
         font-size: 0.8rem;

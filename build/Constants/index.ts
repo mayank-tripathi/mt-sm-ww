@@ -47,7 +47,7 @@ export const Constants: IConstants = {
   /** Documentation title */
   DOCS_TITLE: "Mayank &hearts; Shatakshi (Documentation)",
   /** Full path to favicon.ico, e.g. rootDirJoin("node_modules/ui-common/Public/UI/Web/Styles/images/favicon.ico") */
-  FAVICON_FULL_PATH: rootDirJoin("node_modules/zftsbqoz1g/Public/UI/Web/Styles/images/favicon.ico"),
+  FAVICON_FULL_PATH: rootDirJoin("src/UI/Web/Styles/images/favicon.ico"),
 
   //////////////////////////////////////////////////////
   // Generation of documentation for React components //

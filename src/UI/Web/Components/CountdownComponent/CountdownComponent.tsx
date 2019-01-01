@@ -22,24 +22,27 @@ export default class CountdownComponent extends React.Component<ICountdownCompon
   }
 
   public render() {
-
+    const _days: string = this.PageStore.daysLeft < 10 ? `0${this.PageStore.daysLeft}` : `${this.PageStore.daysLeft}`;
+    const _hours: string = this.PageStore.hoursLeft < 10 ? `0${this.PageStore.hoursLeft}` : `${this.PageStore.hoursLeft}`;
+    const _minutes: string = this.PageStore.minutesLeft < 10 ? `0${this.PageStore.minutesLeft}` : `${this.PageStore.minutesLeft}`;
+    const _seconds: string = this.PageStore.secondsLeft < 10 ? `0${this.PageStore.secondsLeft}` : `${this.PageStore.secondsLeft}`;
     return (
-      <div className="_countdown text-center pb-3">
+      <div className="_countdown text-center px-2 pb-3">
         <p>
           <span className="d-inline-block">
-            <span className="_clockDigit">{this.PageStore.daysLeft}</span>
+            <span className="_clockDigit">{_days}</span>
             <span className="pl-1 _title">Days</span>
           </span>
           <span className="d-inline-block ml-3">
-            <span className="_clockDigit">{this.PageStore.hoursLeft}</span>
+            <span className="_clockDigit">{_hours}</span>
             <span className="pl-1 _title">Hours</span>
           </span>
           <span className="d-inline-block ml-3">
-            <span className="_clockDigit">{this.PageStore.minutesLeft}</span>
+            <span className="_clockDigit">{_minutes}</span>
             <span className="pl-1 _title">Minutes</span>
           </span>
           <span className="d-inline-block ml-3">
-            <span className="_clockDigit">{this.PageStore.secondsLeft}</span>
+            <span className="_clockDigit">{_seconds}</span>
             <span className="pl-1 _title">Seconds</span>
           </span>
         </p>

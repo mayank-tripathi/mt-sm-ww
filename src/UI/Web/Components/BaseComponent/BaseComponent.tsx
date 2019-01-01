@@ -5,6 +5,7 @@ import { observer } from "mobx-react";
 // import { l } from "UI/Stores/LocalisationStore";
 // import { BaseComponentStore } from "UI/Stores/BaseComponentStore";
 
+const _rotateIcon = require("../../Styles/images/rotate-screen-icon.gif"); // tslint:disable-line:no-require-imports no-var-requires
 export interface IBaseComponentProps {
   /** Optional title */
   readonly title?: string;
@@ -39,6 +40,9 @@ export default class BaseComponent extends React.Component<IBaseComponentProps> 
           <div className="col-6 _fold"><PagesComponent /></div>
         </div>
         <div className="row _portrait">
+          <div className="_rotateIcon text-center">
+            <img src={_rotateIcon} />
+          </div>
           <div className="col-12"><SliderComponent images={images} /></div>
           <div className="col-12 _fold"><PagesComponent /></div>
         </div>
