@@ -11,6 +11,6 @@ export class BrowserRunTimeSettingsWrapper extends CommonBrowserRunTimeSettingsW
 
   /** Method to validate runtime settings */
   public validateRunTimeSettings(): void {
-    super.validateRunTimeSettings();
+    // super.validateRunTimeSettings();
   }
 }
