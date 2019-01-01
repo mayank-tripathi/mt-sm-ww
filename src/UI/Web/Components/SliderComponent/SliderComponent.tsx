@@ -70,12 +70,12 @@ export default class SliderComponent extends React.Component<ISliderComponentPro
       this.changeImage(this.PageStore.currentImage + 1);
     }, 5000);
   }
-  private readonly onNavigationClick = async (e: React.SyntheticEvent<HTMLAnchorElement>): Promise<void> => {
+  private readonly onNavigationClick = (e: React.SyntheticEvent<HTMLAnchorElement>): void => {
     e.preventDefault();
     const _element: HTMLElement = e.target as HTMLElement;
     const _dIndex: string | null = _element.getAttribute("data-index");
     const _sindex: number | undefined = _dIndex ? toInt(_dIndex) : 0;
     const index: number = typeof _sindex === "undefined" ? 0 : _sindex;
-    await this.changeImage(index);
+    this.changeImage(index);
   }
 }

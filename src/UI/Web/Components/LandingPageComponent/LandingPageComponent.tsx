@@ -35,7 +35,7 @@ export default class LandingPageComponent extends React.Component<ILandingPageCo
         <div className="text-center pb-3">
           <img className="mid-design" src={_midDesign} />
         </div>
-        <CountdownComponent targetDate={new Date("01/27/2019")} />
+        <CountdownComponent targetDate={new Date("01/27/2019 19:00:00")} />
       </div>
     );
   }
