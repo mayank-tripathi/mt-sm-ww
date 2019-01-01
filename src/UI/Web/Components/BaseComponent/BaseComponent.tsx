@@ -21,7 +21,16 @@ export default class BaseComponent extends React.Component<IBaseComponentProps> 
   // private readonly BaseComponentStore: BaseComponentStore = BaseComponentStore.instance;
 
   public render() {
-    const images: string[] = ["https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/01.JPG", "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/02.JPG"];
+    const images: string[] = [
+      "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/01.jpg",
+      "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/02.JPG",
+      "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/03.JPG",
+      "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/04.JPG",
+      "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/05.JPG",
+      "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/06.JPG",
+      "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/07.JPG",
+      "https://s3.ap-south-1.amazonaws.com/mt-sm-ww-content/slider/08.JPG"
+    ];
 
     return (
       <div className="container-fluid">

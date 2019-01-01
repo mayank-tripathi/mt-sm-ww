@@ -20,7 +20,7 @@ export class PageStore {
   }
 
   //  private readonly _sampleService: ISampleService = new SampleService();
-  public readonly _totalImages: number = 1;
+  public readonly _totalImages: number = 7;
 
   // Observables
 
