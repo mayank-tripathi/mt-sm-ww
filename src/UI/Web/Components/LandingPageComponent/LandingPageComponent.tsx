@@ -5,15 +5,11 @@ import { observer } from "mobx-react";
 
 const _midDesign = require("../../Styles/images/design-mid.png"); // tslint:disable-line:no-require-imports no-var-requires
 const _topDesign = require("../../Styles/images/top-design.png"); // tslint:disable-line:no-require-imports no-var-requires
-export interface ILandingPageComponent {
-  /** Optional title */
-  readonly isActive: boolean;
-}
 
 @observer
-export default class LandingPageComponent extends React.Component<ILandingPageComponent> {
+export default class LandingPageComponent extends React.Component<{}> {
 
-  public constructor(props: ILandingPageComponent) {
+  public constructor(props: {}) {
     // Removed semicolon because code coverage reports "branch not covered" due to the way how typescript is transpiled to javascript
     super(props) // tslint:disable-line:semicolon
   }
@@ -21,9 +17,8 @@ export default class LandingPageComponent extends React.Component<ILandingPageCo
   // private readonly PageStore: PageStore = PageStore.instance;
 
   public render() {
-    const _isActive: string = !this.props.isActive ? "d-none" : "";
     return (
-      <div className={`d-flex flex-column _landingPage ${_isActive}`}>
+      <div className={`d-flex flex-column _landingPage`}>
         <div className="text-center py-3">
           <img className="top-design" src={_topDesign} />
         </div>

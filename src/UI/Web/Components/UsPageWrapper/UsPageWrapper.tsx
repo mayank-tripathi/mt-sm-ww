@@ -1,10 +1,10 @@
 import * as React from "react";
 import BaseComponent from "../BaseComponent";
-import LandingPageComponent from "../LandingPageComponent";
+import UsComponent from "../UsComponent";
 import { observer } from "mobx-react";
 
 @observer
-export default class LandingPageWrapper extends React.Component<{}> {
+export default class UsPageWrapper extends React.Component<{}> {
 
   public constructor(props: {}) {
     // Removed semicolon because code coverage reports "branch not covered" due to the way how typescript is transpiled to javascript
@@ -25,7 +25,7 @@ export default class LandingPageWrapper extends React.Component<{}> {
 
     return (
       <BaseComponent images={this.images}>
-        <LandingPageComponent />
+        <UsComponent />
       </BaseComponent>
     );
   }
