@@ -24,6 +24,7 @@ export default class SliderComponent extends React.Component<ISliderComponentPro
   private _sliderInterval: number = -1;
 
   public componentDidMount() {
+    this.PageStore.setTotalImage(this.props.images.length - 1);
     this.startSlider();
   }
   public render() {

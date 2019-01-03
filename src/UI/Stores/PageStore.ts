@@ -14,13 +14,12 @@ export class PageStore {
    */
   private constructor() { }
 
-  /** Static getter to always return a new instance of PageStore */
   public static get instance(): PageStore {
     return runInAction("new PageStore()", () => new PageStore());
   }
 
   //  private readonly _sampleService: ISampleService = new SampleService();
-  public readonly _totalImages: number = 7;
+  @observable public totalImages: number = 0;
 
   // Observables
 
@@ -54,8 +53,13 @@ export class PageStore {
 
   @action
   public readonly setCurrentImage = (index: number): void => {
-    index = index > this._totalImages ? 0 : index;
+    index = index > this.totalImages ? 0 : index;
+    index = index < 0 ? this.totalImages : index;
     this.currentImage = index;
+  }
+
+  public readonly setTotalImage = (index: number): void => {
+    this.totalImages = index;
   }
 
   public readonly setCurrentPage = (index: number): void => {

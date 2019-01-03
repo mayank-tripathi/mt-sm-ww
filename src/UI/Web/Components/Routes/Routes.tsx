@@ -1,5 +1,5 @@
 import * as React from "react";
-import BaseComponent from "../BaseComponent";
+import LandingPageWrapper from "../LandingPageWrapper";
 import { l as baseLocalisation } from "zftsbqoz1g/Public/UI/Stores/LocalisationStore";
 import { l } from "UI/Stores/LocalisationStore";
 import { observer } from "mobx-react";
@@ -17,7 +17,7 @@ export default class Routes extends React.Component {
   public render() {
     return <>
       <Switch>
-        <Route path="/" component={BaseComponent} />
+        <Route path="/" component={LandingPageWrapper} />
       </Switch>
     </>;
   }
