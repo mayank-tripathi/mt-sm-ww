@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700');
-@import url('https://fonts.googleapis.com/css?family=Merienda+One');
+@import url('https://fonts.googleapis.com/css?family=Merienda+One|Playfair+Display+SC:400,700');
 @import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 
 body{
@@ -9,6 +8,22 @@ body{
   font-family: 'Playfair Display SC', serif;
   font-weight: 400;
 }
+
+h1{
+  font-family: 'Merienda One', cursive;
+  color: $heading-color;
+  font-size: 3rem;
+  font-weight: bold;
+  span{
+    color: $text-color;
+    font-size: 2rem;
+  }
+}
+
+img.top-design{
+  width: 50%;
+}
+
 ._landscape, ._portrait{
   height: 100vh;
 
