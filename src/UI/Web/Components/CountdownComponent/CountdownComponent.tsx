@@ -46,7 +46,7 @@ export default class CountdownComponent extends React.Component<ICountdownCompon
             <span className="pl-1 _title">Seconds</span>
           </span>
         </p>
-        <p className="text-center">&hearts; to the ceremony that will bring us together forever &hearts;</p>
+        <p className="text-center"><i className="fas fa-heart red-text" /> to the ceremony that will bring us together forever <i className="fas fa-heart red-text" /></p>
       </div>
     );
   }

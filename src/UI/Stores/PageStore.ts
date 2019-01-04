@@ -24,7 +24,6 @@ export class PageStore {
   // Observables
 
   @observable public currentImage: number = 0;
-  @observable public currentPage: number = 0;
   @observable public daysLeft: number = 0;
   @observable public hoursLeft: number = 0;
   @observable public minutesLeft: number = 0;
@@ -60,9 +59,5 @@ export class PageStore {
 
   public readonly setTotalImage = (index: number): void => {
     this.totalImages = index;
-  }
-
-  public readonly setCurrentPage = (index: number): void => {
-    this.currentPage = index;
   }
 }

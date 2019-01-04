@@ -7,6 +7,8 @@
 
 /* Application Specific styles start here */
 
+@import "./components/utils";
 @import "./components/_basePage";
+@import "./components/menu";
 @import "./components/_pagesComponent";
 @import "./components/_sliderComponent";

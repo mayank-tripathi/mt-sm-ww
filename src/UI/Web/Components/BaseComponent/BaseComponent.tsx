@@ -1,4 +1,5 @@
 import * as React from "react";
+import MenuComponent from "../MenuComponent";
 import RotatingIcon from "../RotatingIcon";
 import SliderComponent from "../SliderComponent";
 import { observer } from "mobx-react";
@@ -19,6 +20,7 @@ export default class BaseComponent extends React.Component<IBaseComponent> {
     return (
       <div className="container-fluid">
         <div className="row _landscape">
+          <MenuComponent />
           <div className="col-6"><SliderComponent images={this.props.images} /></div>
           <div className="col-6 _fold">
             <div className="_pageBg _pagesContainer">
@@ -28,6 +30,7 @@ export default class BaseComponent extends React.Component<IBaseComponent> {
         </div>
         <div className="row _portrait">
           <RotatingIcon />
+          <MenuComponent />
           <div className="col-12"><SliderComponent images={this.props.images} /></div>
           <div className="col-12 _fold">
             <div className="_pageBg _pagesContainer">

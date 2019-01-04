@@ -1,6 +1,10 @@
-$pages-bg: #fff;
+$red: #93070e;
+$gold: #c68e10;
+$pink: #eb0758;
+$white: #fff;
+$pages-bg: $white;
 $text-color: #333;
-$heading-color: #eb0758;
+$heading-color: $pink;
 $sectionPadding: 25px;
 $totalSectionPadding: $sectionPadding * 2;
 $containerHeight: calc(100vh - #{$totalSectionPadding});

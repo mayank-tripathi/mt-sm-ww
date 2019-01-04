@@ -1,0 +1,51 @@
+._menu{
+  position: absolute;
+  z-index: 8000;
+  padding: 0 !important;
+  a{
+    padding: 8px 10px;
+    background: $white;
+    color: $red;
+    border-radius: 300px;
+    display: inline-block;
+    font-size: 0.75rem;
+
+    &:active, &:visited{
+      color: $red;
+    }
+
+    &:hover, &:focus{
+      color: $gold;
+    }
+  }
+}
+._landscape{
+  ._menu{
+    flex-direction: column;
+    top: 0;
+    left: 0;
+
+    > div{
+      margin-top: 15px;
+
+      &:first-child{
+        margin-top: $sectionPadding;
+      }
+    }
+  }
+}
+._portrait{
+  ._menu{
+    flex-direction: row;
+    top: calc(100vh - 17px);
+    top: -webkit-calc(100vh - 17px);
+
+    > div{
+      margin-left: 15px;
+
+      &:first-child{
+        margin-left: $sectionPadding;
+      }
+    }
+  }
+}
